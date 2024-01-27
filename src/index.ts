@@ -1,10 +1,4 @@
-import express from 'express';
-import http from 'http';
-import bodyParser from "body-parser";
-import cookieParser from "cookie-parser";
-import compression from "compression";
-import cors from "cors";
-
+import { express, http, bodyParser, cookieParser, compression, cors } from './lib/importRoot';
 
 const app = express();
 const DbConnection = require('./DataBase/Connection');
@@ -22,13 +16,3 @@ DbConnection().then(()=>{
     console.log('Server listening on http://localhost:8080/');
   });
 });
-
-
-// const MONGODB_URL = 'mongodb+srv://ashikshafayet:RMLK4ksBnfG2NzcK@cluster0.ynzrzuj.mongodb.net/';
-//
-// mongoose.Promise = Promise;
-// mongoose.connect(MONGODB_URL);
-// mongoose.connection.on('error', (error:Error) => {console.log('Connection Error: ',error)})
-
-// let InitialMessage : string = "Initial Node TypeScript project Setup ";
-// console.log(InitialMessage);
