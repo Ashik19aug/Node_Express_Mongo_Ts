@@ -60,7 +60,7 @@ npm start
 
 <br/><br/>
 
-### SetUp Express
+#### SetUp Express
 ```shell
 npm i express body-parser cookie-parser compression cors
 npm i -D @types/express @types/body-parser @types/cookie-parser @types/compression @types/cors
@@ -69,4 +69,20 @@ npm i -D @types/express @types/body-parser @types/cookie-parser @types/compressi
 ```shell
 npm install mongoose
 npm install -D @types/mongoose
+```
+
+<br/><br/>
+#### SerUp Database
+```shell
+create ./Database/Connection.ts
+
+And Inside Index.ts file Add those line
+
+const DbConnection = require('./DataBase/Connection'); 
+DbConnection().then(()=>{
+  server.listen(8080, () => {
+    console.log('Successfully database connected');
+    console.log('Server listening on http://localhost:8080/');
+  });
+});
 ```
