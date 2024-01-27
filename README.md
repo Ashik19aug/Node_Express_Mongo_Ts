@@ -40,11 +40,11 @@ nodemon.json
 {
   "watch" : "src",
   "ext" : ".js,.ts",
-  "exec" : "ts-node ./src/index.ts"
+  "exec" : "ts-node ./src/UserController.ts"
 }
 ```
 <br/><br/>
-##### Create new folder src and create new file index.ts
+##### Create new folder src and create new file UserController.ts
 #### Now update the package.json file
 ```shell
 "scripts": {
