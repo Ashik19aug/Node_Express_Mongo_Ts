@@ -64,5 +64,9 @@ npm start
 ```shell
 npm i express body-parser cookie-parser compression cors
 npm i -D @types/express @types/body-parser @types/cookie-parser @types/compression @types/cors
-
+```
+#### Install Mongo DB
+```shell
+npm install mongoose
+npm install -D @types/mongoose
 ```
