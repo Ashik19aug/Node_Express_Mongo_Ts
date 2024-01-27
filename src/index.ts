@@ -1,5 +1,9 @@
 import { express, http, bodyParser, cookieParser, compression, cors } from './lib/importRoot';
 
+import * as dotenv from 'dotenv';
+import * as process from "process";
+dotenv.config();
+
 const app = express();
 const DbConnection = require('./DataBase/Connection');
 

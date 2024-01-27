@@ -86,3 +86,8 @@ DbConnection().then(()=>{
   });
 });
 ```
+#### SetUp ENV variables
+```shell
+npm install dotenv
+npm install @types/dotenv --save-dev
+```
