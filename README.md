@@ -78,7 +78,7 @@ create ./Database/Connection.ts
 
 And Inside Index.ts file Add those line
 
-const DbConnection = require('./DataBase/Connection'); 
+const DbConnection = require('./dataBase/Connection'); 
 DbConnection().then(()=>{
   server.listen(8080, () => {
     console.log('Successfully database connected');
