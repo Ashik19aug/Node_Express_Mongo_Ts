@@ -1,6 +1,6 @@
 <div align="center">
 <br>
-<img src="src/assets/Images/Logo/readMeLogo.png" alt="Logo" width="80" height="80">
+<img src="src/assets/Images/Logo/readMeLogo.png" alt="Logo" width="150" height="100">
 <h2>NodeJS SetUp</h2>
 </div>
 
@@ -53,7 +53,16 @@ nodemon.json
   },
 ```
 
-### Run Project
+#### Run Project
 ```shell
 npm start
+```
+
+<br/><br/>
+
+### SetUp Express
+```shell
+npm i express body-parser cookie-parser compression cors
+npm i -D @types/express @types/body-parser @types/cookie-parser @types/compression @types/cors
+
 ```
