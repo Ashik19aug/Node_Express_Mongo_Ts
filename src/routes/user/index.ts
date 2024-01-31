@@ -7,7 +7,7 @@ userRouter.route('/registration-info').post(UserController.registration);
 userRouter.route('/registration-info-verify').post(UserController.registrationVerify);
 userRouter.route('/register-user-info').put(UserController.regCompleteInfo);
 
-userRouter.route('/login').post(UserController.registrationVerify);
+userRouter.route('/login').post(UserController.login);
 
 
 
