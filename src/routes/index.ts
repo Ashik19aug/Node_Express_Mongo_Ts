@@ -1,12 +1,13 @@
 import express from "express";
-
 const router = express.Router();
-const usersRouter = require('./user/index.ts');
 
-router.get('/test', (req:express.Request, res:express.Response) => {
-  res.render('index', {title: 'Play with node and mongo', message: 'Hey Lets Play with node and mongo'})
+
+const userRouter = require('./user/index.ts');
+
+router.get('/', (req:express.Request, res:express.Response) => {
+  res.send('Hello from the router!');
 })
 //use all the routes from userRouter
-// router.use(usersRouter);
+router.use(userRouter);
 
 module.exports = router
