@@ -2,17 +2,21 @@ import { express, http, bodyParser, cookieParser, compression, cors } from './li
 
 const app = express();
 const DbConnection = require('./dataBase/Connection');
+const routes = require('./routes/index');
 
 app.use(cors({ credentials : true }));
 app.use(compression);
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-const server = http.createServer(app);
+// use all custom created routes
+app.use(routes);
 
+const server = http.createServer(app);
+const port = 2222;
 DbConnection().then(()=>{
-  server.listen(8080, () => {
+  server.listen(port, () => {
     console.log('Successfully database connected');
-    console.log('Server listening on http://localhost:8080/');
+    console.log(`Server listening on http://127.0.0.1:${port}/`);
   });
 });
